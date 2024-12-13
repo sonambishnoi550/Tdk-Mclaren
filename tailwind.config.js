@@ -16,15 +16,18 @@ module.exports = {
         },
       },
       fontSize: {
+        'custom-xs': '13px',
         'custom-6xl': '61px',
         'custom-xl': '22px',
       },
       lineHeight: {
+        'custom-md': '115%',
         'custom-lg': '136%',
         'custom-2xl': '150%',
       },
       colors: {
-        'gray':'#525252',
+        gray: '#525252',
+        blue: '#0046AD',
       }
     },
   },

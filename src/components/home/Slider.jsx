@@ -14,7 +14,7 @@ const Slider = () => {
                 loop={true}
                 breakpoints={{
                     320: { slidesPerView: 1, centeredSlides: false },
-         
+
                 }}
                 modules={[Autoplay, Pagination]}
                 autoplay={{
@@ -23,7 +23,7 @@ const Slider = () => {
                 }}
                 pagination={{
                     clickable: true,
-              
+
                 }}
             >
                 {/* Slides */}
