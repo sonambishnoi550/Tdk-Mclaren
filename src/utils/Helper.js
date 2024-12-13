@@ -22,8 +22,8 @@ export const Header_List = [
 
 ];
 export const sliderImages = [
-    './assets/webp/slider-image.png',
-    './assets/webp/slider-image.png',
-    './assets/webp/slider-image.png',
-    './assets/webp/slider-image.png',
+    './assets/webp/slider-image.webp',
+    './assets/webp/slider-image.webp',
+    './assets/webp/slider-image.webp',
+    './assets/webp/slider-image.webp',
 ];

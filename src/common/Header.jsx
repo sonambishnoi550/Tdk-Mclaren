@@ -26,7 +26,7 @@ const Header = () => {
         <div className='min-[1921px]:max-w-[1920px] mx-auto'>
             <div className='relative z-20 bg-darkblue w-full'>
                 <a href="#">
-                    <img className='lg:block hidden w-fit' src="./assets/webp/header-icons.png" alt="logo" />
+                    <img className='lg:block hidden w-fit' src="./assets/webp/header-icons.webp" alt="logo" />
                 </a>
 
             </div>
@@ -56,7 +56,7 @@ const Header = () => {
             </div>
             <div className=" lg:hidden flex justify-between py-4 bg-[#0046AD] px-5 items-center">
                 <a href="#">
-                    <img className='max-w-[105px] lg:hidden block' src="./assets/webp/logo.png" alt="logo" />
+                    <img className='max-w-[105px] lg:hidden block' src="./assets/webp/logo.webp" alt="logo" />
                 </a>
                 <div onClick={toggleSidebar} className='relative z-20 flex-col gap-1 lg:hidden flex items-center'>
                     <span className={`${open ? 'w-8 h-1 bg-white rotate-45 translate-y-3 duration-300 ease-linear' : 'w-8 h-1 bg-white duration-300 ease-linear '}`}></span>
