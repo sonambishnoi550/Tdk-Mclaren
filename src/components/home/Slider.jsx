@@ -8,7 +8,7 @@ import {sliderImages} from '../../utils/Helper'
 
 const Slider = () => {
     return (
-        <div className="pt-20 pb-8 max-lg:pt-16 max-md:pt-10 max-md:pb-2 relative flex justify-center items-center">
+        <div className="pt-20 pb-8 max-lg:pt-16 max-md:pt-10 max-md:pb-2 relative flex justify-center items-center max-w-[1440px] mx-auto">
             <Swiper
                 spaceBetween={30}
                 slidesPerView={1}
