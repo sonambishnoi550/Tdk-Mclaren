@@ -30,7 +30,7 @@ const Header = () => {
 
             </div>
             <div className="flex justify-between bg-blue w-full">
-                <div className='container bg-blue lg:pt-5 lg:pb-3 flex justify-between'>
+                <div className='container bg-blue lg:pt-[27px] lg:pb-4 flex justify-between'>
                     <div className={`flex bg-blue gap-7 max-lg:flex-col max-lg:justify-center max-lg:items-center ${open ? 'max-lg:z-10 max-lg:translate-x-0 max-lg:bg-blue max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:h-full max-lg:w-full justify-center items-center' : 'max-lg:-left-full max-lg:hidden'}`}>
                         {Header_List.map((obj, i) => (
                             <div className='pt-4' key={i}>
