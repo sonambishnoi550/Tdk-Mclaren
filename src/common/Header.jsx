@@ -31,8 +31,8 @@ const Header = () => {
 
             </div>
             <div className="flex justify-between bg-[#0046AD] w-full">
-                <div className='container bg-[#0046AD] lg:py-6 flex justify-between'>
-                    <div className={`flex bg-[#0046AD] gap-6 max-lg:flex-col max-lg:justify-center max-lg:items-center ${open ? 'max-lg:z-10 max-lg:translate-x-0 max-lg:bg-black max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:h-full max-lg:w-full justify-center items-center' : 'max-lg:-left-full max-lg:hidden'}`}>
+                <div className='container bg-[#0046AD] lg:pt-5 lg:pb-3 flex justify-between'>
+                    <div className={`flex bg-[#0046AD] gap-7 max-lg:flex-col max-lg:justify-center max-lg:items-center ${open ? 'max-lg:z-10 max-lg:translate-x-0 max-lg:bg-black max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:h-full max-lg:w-full justify-center items-center' : 'max-lg:-left-full max-lg:hidden'}`}>
                         {Header_List.map((obj, i) => (
                             <div className='pt-4' key={i}>
                                 <ul>
@@ -42,7 +42,7 @@ const Header = () => {
                                 </ul>
                             </div>
                         ))}
-                        <div className="flex py-2 px-[14px] xl:ml-[428px] md:ml-[306px] bg-blue-500 items-center max-w-[476px] justify-end max-sm:pl-3 max-lg:mx-auto border border-white rounded-md">
+                        <div className="flex px-[14px] xl:ml-[405px] md:ml-[293px] bg-blue-500 items-center max-w-[476px] justify-end max-sm:pl-3 max-lg:mx-auto border border-white rounded-md">
                             <input
                                 type="text"
                                 placeholder="Search by Keyword"
