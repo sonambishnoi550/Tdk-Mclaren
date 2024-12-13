@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Header_List } from '../utils/Helper';
 
-
 const Header = () => {
     const [open, setOpen] = useState(false);
     const toggleSidebar = () => setOpen(!open);
@@ -48,7 +47,7 @@ const Header = () => {
                                 placeholder="Search by Keyword"
                                 className="placeholder:text-white text-white placeholder:text-custom-xs placeholder:font-normal w-full !outline-none !bg-transparent placeholder:max-lg:text-sm mr-2"
                             />
-                       <img src="./assets/svg/searc-icon.svg
+                       <img src="/assets/svg/searc-icon.svg
                        " alt="" />
                         </div>
                     </div>
