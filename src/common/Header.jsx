@@ -25,7 +25,7 @@ const Header = () => {
         <div className='min-[1921px]:max-w-[1920px] mx-auto'>
             <div className='relative z-20 bg-darkblue w-full'>
                 <a href="#">
-                    <img className='lg:block hidden w-fit' src="./assets/webp/header-icons.webp" alt="logo" />
+                    <img className='lg:block hidden w-fit pointer-events-none' src="./assets/webp/header-icons.webp" alt="logo" />
                 </a>
 
             </div>
