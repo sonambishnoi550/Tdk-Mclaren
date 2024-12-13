@@ -47,7 +47,7 @@ const Header = () => {
                                 placeholder="Search by Keyword"
                                 className="placeholder:text-white text-white placeholder:text-custom-xs placeholder:font-normal w-full !outline-none !bg-transparent placeholder:max-lg:text-sm mr-2 max-lg:py-2"
                             />
-                       <img src="/assets/svg/searc-icon.svg
+                       <img src="/assets/svg/search-icon.svg
                        " alt="" />
                         </div>
                     </div>
