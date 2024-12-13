@@ -1,4 +1,4 @@
-export const HEADER_LIST = [
+export const Header_List = [
     {
         item: 'About',
         link: "/about"
@@ -16,7 +16,7 @@ export const HEADER_LIST = [
         link: "/menufour"
     },
     {
-        item: 'Menu Four',
+        item: 'Menu Five',
         link: "/menufive"
     }, 
 

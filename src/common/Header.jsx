@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { HEADER_LIST } from '../utils/Helper';
-import { SearchIcon } from '../utils/Icons'; // Make sure you import SearchIcon
+import { Header_List } from '../utils/Helper';
+import { SearchIcon } from '../utils/Icons';
 
 const Header = () => {
     const [open, setOpen] = useState(false);
     const toggleSidebar = () => setOpen(!open);
-    const closeNavbar = () => {
-        setOpen(false);
-    };
-
+    const closeNavbar = () => setOpen(false);
     useEffect(() => {
         const handleOverflow = () => {
             if (open && window.innerWidth < 1024) {
@@ -17,6 +14,7 @@ const Header = () => {
                 document.body.classList.remove("overflow-hidden");
             }
         };
+
         handleOverflow();
         window.addEventListener("resize", handleOverflow);
         return () => {
@@ -25,33 +23,46 @@ const Header = () => {
     }, [open]);
 
     return (
-        <div className='pt-11 overflow-hidden min-[1921px]:max-w-[1920px] mx-auto bg-blue pb-3'>
-            <div className='container flex justify-between items-center'>
-                <div className={`flex gap-6 max-lg:flex-col max-lg:justify-center max-lg:items-center ${open ? 'max-lg:z-10 max-lg:translate-x-0 max-lg:bg-black max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:h-full max-lg:w-full justify-center items-center' : 'max-lg:-left-full max-lg:hidden'}`}>
-                    {HEADER_LIST.map((obj, i) => (
-                        <div key={i}>
-                            <ul>
-                                <li className='flex gap-1 flex-row justify-center items-center relative after:absolute after:w-0 after:transition-all after:duration-300 after:hover:w-full after:bottom-0 after:h-0.5 after:bg-white pb-0.5'>
-                                    <a onClick={closeNavbar} href={obj.link} className=' text-custom-xs leading-custom-md font-normal text-white'>{obj.item}</a>
-                                </li>
-                            </ul>
+        <div className='min-[1921px]:max-w-[1920px] mx-auto'>
+            <div className='relative z-20 bg-darkblue w-full'>
+                <a href="#">
+                    <img className='lg:block hidden w-fit' src="./assets/webp/header-icons.png" alt="logo" />
+                </a>
+
+            </div>
+            <div className="flex justify-between bg-[#0046AD] w-full">
+                <div className='container bg-[#0046AD] lg:py-6 flex justify-between'>
+                    <div className={`flex bg-[#0046AD] gap-6 max-lg:flex-col max-lg:justify-center max-lg:items-center ${open ? 'max-lg:z-10 max-lg:translate-x-0 max-lg:bg-black max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:h-full max-lg:w-full justify-center items-center' : 'max-lg:-left-full max-lg:hidden'}`}>
+                        {Header_List.map((obj, i) => (
+                            <div className='pt-4' key={i}>
+                                <ul>
+                                    <li className='flex gap-1 flex-row justify-center items-center relative after:absolute after:w-0 after:transition-all after:duration-300 after:hover:w-full after:bottom-0 after:h-0.5 after:bg-white pb-0.5'>
+                                        <a onClick={closeNavbar} href={obj.link} className='text-base font-normal text-white'>{obj.item}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        ))}
+                        <div className="flex py-2 px-[14px] xl:ml-[428px] md:ml-[306px] bg-blue-500 items-center max-w-[476px] justify-end max-sm:pl-3 max-lg:mx-auto border border-white rounded-md">
+                            <input
+                                type="text"
+                                placeholder="Search by Keyword"
+                                className="placeholder:text-white text-white placeholder:text-custom-xs placeholder:font-normal w-full !outline-none !bg-transparent placeholder:max-lg:text-sm mr-2"
+                            />
+                            <SearchIcon />
                         </div>
-                    ))}
+                    </div>
+                   
                 </div>
-
-                <div className="relative flex items-center">
-                    <input
-                        className="bg-transparent text-white border py-2 px-[14px] placeholder:text-white pl-10 pr-10"
-                        type="text"
-                        placeholder="Search by Keyword"
-                    />
-                    {<SearchIcon className="absolute left-3 text-white" />}
-                </div>
-
-                <div onClick={toggleSidebar} className='z-[15] flex-col gap-1 lg:hidden flex'>
-                    <span className={`${open ? 'w-8 h-1 bg-white rotate-45 translate-y-3 duration-300 ease-linear rounded' : 'w-8 h-1 bg-white duration-300 ease-linear rounded'}`}></span>
-                    <span className={`${open ? 'w-8 h-1 bg-white -translate-x-10 opacity-0 ' : 'w-8 h-1 rounded bg-white'}`}></span>
-                    <span className={`${open ? 'w-8 h-1 bg-white -rotate-45 -translate-y-1 duration-300 ease-linear rounded' : 'w-8 h-1 bg-white duration-300 ease-linear rounded'}`}></span>
+            </div>
+            <div className=" lg:hidden flex justify-between py-4 bg-[#0046AD] px-5 items-center">
+                <a href="#">
+                    <img className='max-w-[105px] lg:hidden block' src="./assets/webp/logo.png" alt="logo" />
+                </a>
+                <div onClick={toggleSidebar} className='relative z-20 flex-col gap-1 lg:hidden flex items-center'>
+                    <span className={`${open ? 'w-8 h-1 bg-white rotate-45 translate-y-3 duration-300 ease-linear' : 'w-8 h-1 bg-white duration-300 ease-linear '}`}></span>
+                    <span className={`${open ? 'w-8 h-1 bg-white -translate-x-10 opacity-0' : 'w-8 h-1  bg-white'}`}></span>
+                    <span className={`${open ? 'w-8 h-1 bg-white -rotate-45 -translate-y-1 duration-300 ease-linear ' : 'w-8 h-1 bg-white duration-300 ease-linear '}`}></span>
+                <p className='text-white font-normal'>MENU</p>
                 </div>
             </div>
         </div>

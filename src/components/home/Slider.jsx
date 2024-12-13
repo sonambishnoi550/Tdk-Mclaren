@@ -8,7 +8,7 @@ import {sliderImages} from '../../utils/Helper'
 
 const Slider = () => {
     return (
-        <div className="py-20 relative">
+        <div className="py-20 relative flex justify-center items-center">
             <Swiper
                 spaceBetween={30}
                 slidesPerView={1}
