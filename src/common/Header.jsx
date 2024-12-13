@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Header_List } from '../utils/Helper';
-import { SearchIcon } from '../utils/Icons';
+
 
 const Header = () => {
     const [open, setOpen] = useState(false);
@@ -42,13 +42,14 @@ const Header = () => {
                                 </ul>
                             </div>
                         ))}
-                        <div className="flex px-[14px] xl:ml-[405px] md:ml-[293px] bg-blue-500 items-center max-w-[476px] justify-end max-sm:pl-3 max-lg:mx-auto border border-white rounded-md">
+                        <div className="flex px-[14px] xl:ml-[405px] max-md:py-3 md:ml-[293px] bg-blue-500 items-center max-w-[476px] justify-end max-sm:pl-3 max-lg:mx-auto border border-white rounded-md">
                             <input
                                 type="text"
                                 placeholder="Search by Keyword"
                                 className="placeholder:text-white text-white placeholder:text-custom-xs placeholder:font-normal w-full !outline-none !bg-transparent placeholder:max-lg:text-sm mr-2"
                             />
-                            <SearchIcon />
+                       <img src="./assets/svg/searc-icon.svg
+                       " alt="" />
                         </div>
                     </div>
                    
