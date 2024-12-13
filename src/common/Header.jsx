@@ -31,7 +31,7 @@ const Header = () => {
             </div>
             <div className="flex justify-between bg-blue w-full">
                 <div className='container bg-blue lg:pt-5 lg:pb-3 flex justify-between'>
-                    <div className={`flex bg-blue gap-7 max-lg:flex-col max-lg:justify-center max-lg:items-center ${open ? 'max-lg:z-10 max-lg:translate-x-0 max-lg:bg-black max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:h-full max-lg:w-full justify-center items-center' : 'max-lg:-left-full max-lg:hidden'}`}>
+                    <div className={`flex bg-blue gap-7 max-lg:flex-col max-lg:justify-center max-lg:items-center ${open ? 'max-lg:z-10 max-lg:translate-x-0 max-lg:bg-blue max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:h-full max-lg:w-full justify-center items-center' : 'max-lg:-left-full max-lg:hidden'}`}>
                         {Header_List.map((obj, i) => (
                             <div className='pt-4' key={i}>
                                 <ul>
@@ -45,7 +45,7 @@ const Header = () => {
                             <input
                                 type="text"
                                 placeholder="Search by Keyword"
-                                className="placeholder:text-white text-white placeholder:text-custom-xs placeholder:font-normal w-full !outline-none !bg-transparent placeholder:max-lg:text-sm mr-2"
+                                className="placeholder:text-white text-white placeholder:text-custom-xs placeholder:font-normal w-full !outline-none !bg-transparent placeholder:max-lg:text-sm mr-2 max-lg:py-2"
                             />
                        <img src="/assets/svg/searc-icon.svg
                        " alt="" />
@@ -54,7 +54,7 @@ const Header = () => {
                    
                 </div>
             </div>
-            <div className=" lg:hidden flex justify-between py-4 bg-[#0046AD] px-5 items-center">
+            <div className=" lg:hidden flex justify-between py-4 bg-blue px-5 items-center">
                 <a href="#">
                     <img className='max-w-[105px] lg:hidden block' src="./assets/webp/logo.webp" alt="logo" />
                 </a>
