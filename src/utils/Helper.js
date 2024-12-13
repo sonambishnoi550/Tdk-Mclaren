@@ -21,3 +21,9 @@ export const HEADER_LIST = [
     }, 
 
 ];
+export const sliderImages = [
+    './assets/webp/slider-image.png',
+    './assets/webp/slider-image.png',
+    './assets/webp/slider-image.png',
+    './assets/webp/slider-image.png',
+];

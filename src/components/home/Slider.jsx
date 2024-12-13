@@ -3,6 +3,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import 'swiper/css/pagination';
+import {sliderImages} from '../../utils/Helper'
 
 
 const Slider = () => {
@@ -14,7 +15,6 @@ const Slider = () => {
                 loop={true}
                 breakpoints={{
                     320: { slidesPerView: 1, centeredSlides: false },
-
                 }}
                 modules={[Autoplay, Pagination]}
                 autoplay={{
@@ -23,38 +23,17 @@ const Slider = () => {
                 }}
                 pagination={{
                     clickable: true,
-
                 }}
             >
-                {/* Slides */}
-                <SwiperSlide>
-                    <img
-                        className="max-w-full"
-                        src="./assets/webp/slider-image.png"
-                        alt="slider-image"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img
-                        className="max-w-full"
-                        src="./assets/webp/slider-image.png"
-                        alt="slider-image"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img
-                        className="max-w-full"
-                        src="./assets/webp/slider-image.png"
-                        alt="slider-image"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img
-                        className="max-w-full"
-                        src="./assets/webp/slider-image.png"
-                        alt="slider-image"
-                    />
-                </SwiperSlide>
+                {sliderImages.map((image, index) => (
+                    <SwiperSlide key={index}>
+                        <img
+                            className="max-w-full"
+                            src={image}
+                            alt={`slider-image-${index}`}
+                        />
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     );
