@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Header_List } from '../utils/Helper';
+import { Header_List } from '../utils/helper';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
     const [open, setOpen] = useState(false);
@@ -13,7 +15,6 @@ const Header = () => {
                 document.body.classList.remove("overflow-hidden");
             }
         };
-
         handleOverflow();
         window.addEventListener("resize", handleOverflow);
         return () => {
@@ -24,10 +25,7 @@ const Header = () => {
     return (
         <div className='min-[1921px]:max-w-[1920px] mx-auto'>
             <div className='relative z-20 bg-darkblue w-full'>
-                <a href="#">
-                    <img className='lg:block hidden w-fit pointer-events-none' src="./assets/webp/header-icons.webp" alt="logo" />
-                </a>
-
+                <img className='lg:block hidden w-fit pointer-events-none' src="./assets/webp/header-icons.webp" alt="logo" />
             </div>
             <div className="flex justify-between bg-blue w-full">
                 <div className='container bg-blue lg:pt-[27px] lg:pb-4 flex justify-between'>
@@ -36,7 +34,7 @@ const Header = () => {
                             <div className='pt-4' key={i}>
                                 <ul>
                                     <li className='flex gap-1 flex-row justify-center items-center relative after:absolute after:w-0 after:transition-all after:duration-300 after:hover:w-full after:bottom-0 after:h-0.5 after:bg-white pb-0.5'>
-                                        <a onClick={closeNavbar} href={obj.link} className='text-custom-xs font-normal text-white'>{obj.item}</a>
+                                        <Link onClick={closeNavbar} to={obj.link} className='text-custom-xs font-normal text-white'>{obj.item}</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -47,14 +45,13 @@ const Header = () => {
                                 placeholder="Search by Keyword"
                                 className="placeholder:text-white text-white placeholder:text-custom-xs placeholder:font-normal w-full !outline-none !bg-transparent placeholder:max-lg:text-sm mr-2 max-lg:py-2"
                             />
-                       <img src="/assets/svg/search-icon.svg
-                       " alt="" />
+                            <img src="/assets/svg/search-icon.svg" alt="search-icon" />
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
-            <div className=" lg:hidden flex justify-between py-4 bg-blue px-5 items-center">
+            <div className="lg:hidden flex justify-between py-4 bg-blue px-5 items-center">
                 <a href="#">
                     <img className='max-w-[105px] lg:hidden block' src="./assets/webp/logo.webp" alt="logo" />
                 </a>
@@ -62,7 +59,7 @@ const Header = () => {
                     <span className={`${open ? 'w-8 h-1 bg-white rotate-45 translate-y-3 duration-300 ease-linear' : 'w-8 h-1 bg-white duration-300 ease-linear '}`}></span>
                     <span className={`${open ? 'w-8 h-1 bg-white -translate-x-10 opacity-0' : 'w-8 h-1  bg-white'}`}></span>
                     <span className={`${open ? 'w-8 h-1 bg-white -rotate-45 -translate-y-1 duration-300 ease-linear ' : 'w-8 h-1 bg-white duration-300 ease-linear '}`}></span>
-                <p className='text-white font-normal'>MENU</p>
+                    <p className='text-white font-normal'>MENU</p>
                 </div>
             </div>
         </div>

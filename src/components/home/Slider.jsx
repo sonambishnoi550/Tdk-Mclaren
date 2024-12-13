@@ -3,7 +3,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import 'swiper/css/pagination';
-import {sliderImages} from '../../utils/Helper'
+import { Slider_Images } from '../../utils/helper'
 
 
 const Slider = () => {
@@ -25,7 +25,7 @@ const Slider = () => {
                     clickable: true,
                 }}
             >
-                {sliderImages.map((image, index) => (
+                {Slider_Images.map((image, index) => (
                     <SwiperSlide key={index}>
                         <img
                             className="max-w-full"
